@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!-- meta:vp-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+    <title>首页</title>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+    <div class="jd_layout">
+       
+        <!--轮播图-->
+        <div class="jd_banner">
+            <ul>
+                <li><a href="#"><img src="images/l8.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="images/l1.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="images/l2.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="images/l3.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="images/l4.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="images/l5.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="images/l6.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="images/l7.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="images/l8.jpg" alt=""/></a></li>
+                <li><a href="#"><img src="images/l1.jpg" alt=""/></a></li>
+            </ul>
+            <ul>
+                <li class="now"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <!--引用核心文件-->
+    <script src="js/zepto/zepto.min.js"></script>
+    <!--引用扩展性选择器-->
+    <script src="js/zepto/selector.js"></script>
+    <!--引用动画模块-->
+    <script src="js/zepto/fx.js"></script>
+    <!--引用移动touch-->
+    <script src="js/zepto/touch.js"></script>
+    <script>
+        $(function(){
+            /*banner*/
+            var $banner = $('.jd_banner');
+            var width = $banner.width();
+
+            /*图片盒子*/
+            var imageBox = $banner.find('ul:eq(0)');
+            /*点盒子*/
+            var pointBox = $banner.find('ul:eq(1)')
+            /*所有的点*/
+            var points = pointBox.find('li');
+
+            var animateFuc = function(){
+                imageBox.animate({'transform':'translateX('+(-index*width)+'px)'},200,'ease',function(){
+                    if(index >= 9){
+                        index = 1;
+                        /*瞬间定位*/
+                        imageBox.css({'transform':'translateX('+(-index*width)+'px)'});
+                    }else if(index <= 0){
+                        index = 8;
+                        imageBox.css({'transform':'translateX('+(-index*width)+'px)'});
+                    }
+                    /*点盒子 对应*/
+                    points.removeClass('now').eq(index-1).addClass('now');
+                });
+            };
+
+            var index =1;
+            var timer = setInterval(function(){
+                index ++;
+                /*做动画*/
+                animateFuc();
+            },5000);
+
+
+            imageBox.on('swipeLeft',function(){
+                index ++;
+                animateFuc();
+            });
+
+            imageBox.on('swipeRight',function(){
+                index --;
+                animateFuc();
+            });
+
+        });
+    </script>
+</body>
+</html>

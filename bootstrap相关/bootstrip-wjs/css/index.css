@@ -1,0 +1,204 @@
+/*公共样式*/
+body{
+	font-family: "Microsoft YaHei",sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+a{
+	color: #333;
+}
+a:hover{
+	color: #8D8D8D;
+	text-decoration: none;
+}
+.m_l_10{
+	margin-left: 10px;
+}
+/*定义自己的字体*/
+@font-face{
+	font-family: yjs;/*指定字体的名称*/
+	src: url('../fonts/MiFie-Web-Font.eot') format('embedded-opentype'),
+    url('../fonts/MiFie-Web-Font.svg') format('svg'),
+    url('../fonts/MiFie-Web-Font.ttf') format('truetype'),
+    url('../fonts/MiFie-Web-Font.woff') format('woff');
+}
+/*定义自己的字体图标*/
+.yjs_icon{
+    font-family: yjs;
+}
+.yjs_icon_tel::before{
+    content: "\e909";
+}
+.yjs_icon_logo::before{
+    content: "\e920";
+}
+.yjs_icon_logozi::before{
+    content: "\e93e";
+}
+/*顶部通栏样式*/
+.topBar{
+	border: 1px solid #ccc;
+	font-size: 13px;
+	color: #8D8D8D;
+}
+.topBar > .container > .row > div{
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-right: 1px solid #ccc;
+}
+.topBar > .container > .row > div:last-child{
+	border-right: none;
+}
+/*.topBar > .container > .row > div{
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+}
+.topBar > .container > .row > div + div{
+	border-left: 1px solid #ccc;
+	}*/
+.topBar a{
+	color: #8D8D8D;
+}
+.topBar a:hover{
+	color: #8D8D8D;
+}
+/*二维码*/
+.ewm{
+	position: relative;
+	display: block;
+}
+.ewm img{
+	display: none;
+	z-index: 99;
+}
+.ewm:hover img{
+	display: block;
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	margin-left: -60px;
+}
+/*登录注册按钮*/
+.topBar .btn-register{
+    background: #E92322;
+    color: #fff;
+    padding: 3px 15px;
+}
+.topBar .btn-register:hover{
+    color: #fff;
+    border-color:#E92322;
+}
+.topBar .btn-login:hover{
+	color: #8D8D8D;
+    text-decoration: none;
+}
+/*导航栏*/
+.y-nav {
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 18px;
+}
+.y-nav .navbar-brand {
+  color: #777;
+  height: 70px;
+  line-height: 40px;
+}
+.y-nav .navbar-brand:hover,
+.y-nav .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+.navbar-brand img{
+	margin-top: -12px;
+}
+.y-nav .navbar-text {
+  color: #777;
+}
+.y-nav .navbar-nav > li > a {
+  color: #777;
+  height: 70px;
+  line-height: 40px;
+}
+.y-nav .navbar-nav > li > a:hover,
+.y-nav .navbar-nav > li > a:focus {
+  color: #333;
+  background-color: transparent;
+  border-bottom: 3px solid #E92322;
+}
+
+.y-nav .navbar-nav > .active > a:hover,
+.y-nav .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #fff;
+  border-bottom: 3px solid #E92322;
+}
+.y-nav .navbar-nav > .disabled > a,
+.y-nav .navbar-nav > .disabled > a:hover,
+.y-nav .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+.y-nav .navbar-toggle {
+  border-color: #ddd;
+}
+.y-nav .navbar-toggle:hover,
+.y-nav .navbar-toggle:focus {
+  background-color: #ddd;
+}
+.y-nav .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+.y-nav .navbar-collapse,
+.y-nav .navbar-form {
+  border-color: #e7e7e7;
+}
+.y-nav .navbar-nav > .open > a,
+.y-nav .navbar-nav > .open > a:hover,
+.y-nav .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+  .y-nav .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .y-nav .navbar-nav .open .dropdown-menu > li > a:hover,
+  .y-nav .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .y-nav .navbar-nav .open .dropdown-menu > .active > a,
+  .y-nav .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .y-nav .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .y-nav .navbar-nav .open .dropdown-menu > .disabled > a,
+  .y-nav .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .y-nav .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+.y-nav .navbar-link {
+  color: #777;
+}
+.y-nav .navbar-link:hover {
+  color: #333;
+}
+.y-nav .btn-link {
+  color: #777;
+}
+.y-nav .btn-link:hover,
+.y-nav .btn-link:focus {
+  color: #333;
+}
+.y-nav .btn-link[disabled]:hover,
+fieldset[disabled] .y-nav .btn-link:hover,
+.y-nav .btn-link[disabled]:focus,
+fieldset[disabled] .y-nav .btn-link:focus {
+  color: #ccc;
+}

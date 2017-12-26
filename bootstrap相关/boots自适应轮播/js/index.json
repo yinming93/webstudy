@@ -1,0 +1,22 @@
+[
+  {
+    "pc":"images/1.jpg",
+    "mb":"images/m1.jpg"
+  },
+  {
+    "pc":"images/2.jpg",
+    "mb":"images/m2.jpg"
+  },
+  {
+    "pc":"images/3.jpg",
+    "mb":"images/m3.jpg"
+  },
+  {
+    "pc":"images/4.jpg",
+    "mb":"images/m4.jpg"
+  },
+  {
+    "pc":"images/5.jpg",
+    "mb":"images/m5.jpg"
+  }
+]

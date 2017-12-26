@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>内容绑定</title>
+</head>
+<body>
+<div ng-app="ang">
+<div ng-controller="mcontroller">
+	花括号输出：<span>{{name}}</span><br>
+	ng-bind输出：<span ng-bind="answer"></span>
+</div>
+</div>
+<script src="angular.js"></script>
+<script>
+	//1.创建一个angular模块ang
+	var ang = angular.module('ang',[]);
+	ang.controller('mcontroller',function($scope){
+		//$scope是mcontroller这个angularJs控制器所附带的‘数据仓库’,也叫作用域
+		$scope.name='What the fuck!'
+		$scope.answer='fuck Y O U!'
+	});
+</script>
+</body>
+</html>

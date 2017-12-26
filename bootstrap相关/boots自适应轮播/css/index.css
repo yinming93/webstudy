@@ -1,0 +1,33 @@
+/*公共样式*/
+body{
+	font-family: "Microsoft YaHei",sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+a{
+	color: #333;
+}
+a:hover{
+	color: #8D8D8D;
+	text-decoration: none;
+}
+.m_l_10{
+	margin-left: 10px;
+}
+/*轮播图*/
+.pc_imageBox{
+    height: 410px;
+    width: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+.m_imageBox{
+    width: 100%;
+    display: block;
+}
+.m_imageBox img{
+    width: 100%;
+    display: block;
+}

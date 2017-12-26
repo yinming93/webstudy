@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>数据仓库</title>
+</head>
+<body ng-app="app">
+<div ng-controller="maincontroller">
+	<span>值：{{name}}</span><br>
+	
+</div>
+<script src="./angular.js"></script>
+</body>
+</html>
+<script>
+	var app=angular.module('app',[]);
+
+	app.controller('maincontroller',function($scope){
+
+	$scope.name='嘎嘎';
+	})
+</script>
